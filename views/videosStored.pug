@@ -1,0 +1,5 @@
+each item in arr= videos
+    .stored-video
+        h5.stored-video-title(id= item.videoId onclick='playVideo(this)')= item.videoTitle
+        button.close.video-deleter(id = item._id type='button' onclick='deleteFromData(this)' aria-label='Close')
+            span.video-deleter-span(aria-hidden='true') &times;

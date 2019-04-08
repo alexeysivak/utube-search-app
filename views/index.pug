@@ -1,0 +1,38 @@
+extends layout
+
+block header
+  header.container-fluid.mb-5.text-center.header.justify-content-lg-around
+    .logo-block
+        .logo-title
+            .logo-name USEARCH
+            .logo-badge X
+        .sub-logo  the next level
+    h3.pb-4.main-title Simple app for searching videos on Youtube
+block content
+    section.main-body
+        .container-fluid
+            .row
+                .col-4
+                    h4.text-center.history-container-title Here your video history
+                    #historyContainer
+                        include videosStored
+                .col-8
+                    .row
+                        .input-group.pl-5.mr-3
+                            .input-group-prepend
+                                span.input-group-text#basic-addon1 Enter parametrs
+                            input.form-control(placeholder="Search" aria-label="Search" aria-describedby="basic-addon1" type='search' id='youtubeInput' onsearch='inputAndRender(this)')
+                    .container.ml-4.mr-4.pd-4#search-results
+                    .container.m-3
+                        h3#playedVideoTitle
+                        .embed-responsive.embed-responsive-16by9
+                            #player.embed-responsive-item
+block footer
+    footer.py-3.text-center.mt-2
+        p.footer-text Search for youtube videos, watch them, store to your history
+block scripts
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")
+    script(src='javascripts/iframe.js')
+    script(src='javascripts/script.js')
