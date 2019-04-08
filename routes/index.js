@@ -5,7 +5,7 @@ const db = require('../db/db');
 
 db.checkConnection(); // check if db connected
 // GET https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=surfing&key=[YOUR_API_KEY] HTTP/1.1
-const API_KEY = 'AIzaSyAmFtK3beH_66LTWV2NvyB2b3VQOFKGsTI';
+const API_KEY = 'your google api key follows here';
 const youtubeBasic = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=18&q=`;
 
 /* GET home page. */
